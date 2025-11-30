@@ -1,0 +1,5 @@
+{
+  "name": "Ionian Mode Explorer",
+  "description": "Interactive music theory tool to visualize modes (Ionian, Dorian, Phrygian, etc.) relative to a selected tonic key, including scale degrees and chord formulas.",
+  "requestFramePermissions": []
+}
