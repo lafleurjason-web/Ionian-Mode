@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Change this if your default branch is "master"
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -29,12 +29,13 @@ jobs:
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs'
+          # This MUST match the outDir in your vite.config.ts
+          path: './docs' 
 
       - name: Deploy to GitHub Pages
         id: deployment
